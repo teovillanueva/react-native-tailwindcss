@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/styled",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "> TODO: description",
   "author": "teovillanueva <teodoro2102@gmail.com>",
   "homepage": "",
@@ -8,11 +8,10 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "dist": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
@@ -38,5 +37,5 @@
     "lodash": "^4.17.21",
     "tailwind-react-native-classnames": "^1.5.1"
   },
-  "gitHead": "47e177ab138e3b66c5adeea7cd78ffe49d6ad781"
+  "gitHead": "92ac7dbf7c98331e593ed1a8f4ab48b7c3de0e5b"
 }

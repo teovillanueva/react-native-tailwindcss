@@ -1,7 +1,7 @@
 {
   "name": "@react-native-tailwindcss/example",
   "main": "node_modules/expo/AppEntry.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "scripts": {
     "dev": "cross-env NEXT_APP=true next dev",
     "start": "expo start",
@@ -11,7 +11,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "@react-native-tailwindcss/styled": "^1.0.4",
+    "@react-native-tailwindcss/styled": "^1.0.5",
     "expo": "~43.0.2",
     "expo-status-bar": "~1.1.0",
     "next": "^12.0.3",
@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
-    "@react-native-tailwindcss/postcss": "^1.0.4",
-    "@react-native-tailwindcss/tailwind": "^1.0.4",
+    "@react-native-tailwindcss/postcss": "^1.0.5",
+    "@react-native-tailwindcss/tailwind": "^1.0.5",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "autoprefixer": "^10.4.0",

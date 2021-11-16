@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/postcss",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "> TODO: description",
   "author": "teovillanueva <teodoro2102@gmail.com>",
   "homepage": "",
@@ -17,14 +17,14 @@
     "postcss": "^8.3.11"
   },
   "directories": {
-    "lib": "lib",
+    "dist": "dist",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
   },
-  "gitHead": "47e177ab138e3b66c5adeea7cd78ffe49d6ad781"
+  "gitHead": "92ac7dbf7c98331e593ed1a8f4ab48b7c3de0e5b"
 }
