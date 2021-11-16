@@ -1,0 +1,47 @@
+{
+  "name": "@react-native-tailwindcss/example",
+  "main": "node_modules/expo/AppEntry.js",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "cross-env NEXT_APP=true next dev",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-native-tailwindcss/styled": "*",
+    "expo": "~43.0.2",
+    "expo-status-bar": "~1.1.0",
+    "next": "^12.0.3",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@react-native-tailwindcss/postcss": "*",
+    "@react-native-tailwindcss/tailwind": "*",
+    "@types/react": "~17.0.21",
+    "@types/react-native": "~0.64.12",
+    "autoprefixer": "^10.4.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-react-native-web": "^0.17.5",
+    "cross-env": "^7.0.3",
+    "expo-yarn-workspaces": "^1.6.0",
+    "next-transpile-modules": "^9.0.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19",
+    "typescript": "~4.3.5"
+  },
+  "private": true,
+  "workspaces": {
+    "nohoist": [
+      "**",
+      "**/styled",
+      "**/styled/**"
+    ]
+  }
+}

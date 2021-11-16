@@ -1,0 +1,28 @@
+{
+  "name": "@react-native-tailwindcss/tailwind",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "teovillanueva <teodoro2102@gmail.com>",
+  "homepage": "",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@types/tailwindcss": "^2.2.4",
+    "jest": "^27.3.1"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  }
+}
