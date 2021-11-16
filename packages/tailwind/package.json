@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/tailwind",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "> TODO: description",
   "author": "teovillanueva <teodoro2102@gmail.com>",
   "homepage": "",
@@ -24,5 +24,6 @@
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
-  }
+  },
+  "gitHead": "3603332dcb3c49933f94700523237d565c6c1ee7"
 }
