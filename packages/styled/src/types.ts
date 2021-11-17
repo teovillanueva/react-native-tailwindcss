@@ -1,12 +1,12 @@
-import type { FC, ComponentType, Component, ComponentClass } from "react";
+import type { FC, ComponentType, Component, ComponentClass } from 'react';
 import type {
   StyleProp,
   TextInputFocusEventData,
   NativeSyntheticEvent,
   AccessibilityRole as RNAccessibilityRole,
-} from "react-native";
+} from 'react-native';
 
-export type AccessibilityRole = RNAccessibilityRole | "form";
+export type AccessibilityRole = RNAccessibilityRole | 'form';
 
 export type FocusHandlers = {
   onFocus?:
@@ -28,9 +28,6 @@ export type RNTailwindComponent<P = {}> = FC<P & RNTailwindComponentProps>;
 
 export type StylableComponentProps = {
   style?: StyleProp<any>;
-  dataSet?: Record<string, unknown>;
-} & FocusHandlers;
+};
 
-export type StylableComponent =
-  | ComponentType<StylableComponentProps>
-  | ComponentClass<StylableComponentProps>;
+export type StylableComponent = ComponentType<StylableComponentProps>;

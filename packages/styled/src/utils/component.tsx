@@ -1,58 +1,56 @@
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from 'react';
 
 import {
   NativeSyntheticEvent,
   StyleSheet,
   TextInputFocusEventData,
-} from "react-native";
+} from 'react-native';
 
-import compileMobileStyle from "tailwind-react-native-classnames";
+import compileMobileStyle from 'tailwind-react-native-classnames';
 
-import { RNTailwindComponent, StylableComponent } from "../types";
+import { RNTailwindComponent, StylableComponent } from '../types';
 
 export function createComponent<P = {}>(
   Component: StylableComponent,
-  componentClasses: string
+  componentClasses: string,
 ): RNTailwindComponent<P> {
   const c: RNTailwindComponent<P> = (props) => {
     const [focused, setFocused] = useState<boolean>(false);
 
     let classes = useMemo(
-      () => (props.tw ? componentClasses + " " + props.tw : componentClasses),
-      [props.tw]
+      () => (props.tw ? componentClasses + ' ' + props.tw : componentClasses),
+      [props.tw],
     );
 
     const interpretedClasses = useMemo(
       () =>
         classes
-          .split(" ")
+          .split(' ')
           .map((className) => {
-            if (className.includes(":focus") || className.includes("focus:")) {
+            if (className.includes(':focus') || className.includes('focus:')) {
               if (focused) {
                 console.log(className, focused);
-                className = className.replace(":focus", "");
-                className = className.replace("focus:", "");
+                className = className.replace(':focus', '');
+                className = className.replace('focus:', '');
                 console.log(className, focused);
               } else {
-                className = "";
+                className = '';
               }
             }
 
             return className;
           })
-          .join(" "),
-      [classes, focused]
+          .join(' '),
+      [classes, focused],
     );
-
-    console.log(interpretedClasses);
 
     const style = useMemo(
       () =>
         StyleSheet.compose(
           props.style,
-          compileMobileStyle`${interpretedClasses}`
+          compileMobileStyle`${interpretedClasses}`,
         ),
-      [interpretedClasses]
+      [interpretedClasses],
     );
 
     const onFocus = useCallback(
@@ -60,7 +58,7 @@ export function createComponent<P = {}>(
         props.onFocus?.(e);
         setFocused(true);
       },
-      [props.onFocus]
+      [props.onFocus],
     );
 
     const onBlur = useCallback(
@@ -68,7 +66,7 @@ export function createComponent<P = {}>(
         props.onBlur?.(e);
         setFocused(false);
       },
-      [props.onBlur]
+      [props.onBlur],
     );
 
     const p = { ...props, onFocus, onBlur };
@@ -76,7 +74,7 @@ export function createComponent<P = {}>(
     return <Component {...p} style={style} />;
   };
 
-  c.displayName = `Tailwind${Component.displayName || "Component"}`;
+  c.displayName = `Tailwind.${Component.displayName || 'Component'}`;
 
   return c;
 }
