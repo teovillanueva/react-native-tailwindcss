@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/styled",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "React native tailwindcss styled API",
   "main": "dist/index.js",
   "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
