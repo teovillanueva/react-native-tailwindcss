@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/primitives",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "React native tailwindcss primitive components",
   "main": "dist/index.js",
   "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
