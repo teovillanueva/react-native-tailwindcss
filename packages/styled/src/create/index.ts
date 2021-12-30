@@ -1,0 +1,1 @@
+export { createStyled } from "./create";

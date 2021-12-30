@@ -1,0 +1,47 @@
+{
+  "name": "@react-native-tailwindcss/root",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
+  "author": "Teodoro Villanueva <teodoro2102@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "release": "turbo run release"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
+    "release-it": "^14.11.8",
+    "turbo": "^1.0.23",
+    "typescript": "^4.5.4"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "turbo": {
+    "baseBranch": "origin/main",
+    "pipeline": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "dist/**"
+        ]
+      },
+      "release": {
+        "dependsOn": [
+          "build"
+        ]
+      },
+      "dev": {
+        "cache": false
+      }
+    }
+  }
+}

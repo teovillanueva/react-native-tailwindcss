@@ -1,0 +1,31 @@
+{
+  "name": "@react-native-tailwindcss/primitives",
+  "version": "1.0.0",
+  "description": "React native tailwindcss primitive components",
+  "main": "dist/index.js",
+  "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
+  "author": "Teodoro Villanueva <teodoro2102@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "release": "release-it --npm.skipChecks --ci --token=$TURBOREPO_TOKEN"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(primitives): release v${version} [skip ci]",
+      "tagName": "primitives@${version}"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "@react-native-tailwindcss/styled": "*",
+    "react-native": "^0.66.4"
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.66.10"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@react-native-tailwindcss/postcss",
+  "version": "1.0.5",
+  "description": "React native tailwindcss postcss plugin",
+  "main": "index.js",
+  "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
+  "author": "Teodoro Villanueva <teodoro2102@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "release": "release-it --npm.skipChecks --ci --token=$TURBOREPO_TOKEN"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore(postcss): release v${version} [skip ci]",
+      "tagName": "postcss@${version}"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
+}
