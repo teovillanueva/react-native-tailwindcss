@@ -8,11 +8,11 @@ import {
 } from "react-native";
 
 export const createPrimitives = (styled: StyledFunction) => {
-  const View = styled(RNView);
-  const ScrollView = styled(RNScrollView);
-  const SafeAreaView = styled(RNSafeAreaView);
-  const Pressable = styled(RNPressable);
-  const TouchableOpacity = styled(RNTouchableOpacity);
+  const View = styled(RNView)``;
+  const ScrollView = styled(RNScrollView)``;
+  const SafeAreaView = styled(RNSafeAreaView)``;
+  const Pressable = styled(RNPressable)``;
+  const TouchableOpacity = styled(RNTouchableOpacity)``;
 
   return {
     View,
