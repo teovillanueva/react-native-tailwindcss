@@ -35,11 +35,7 @@ export const createTailwindComponent = <
         );
       }
 
-      return preCompiledClassnames + " " + props.tw
-        ? Array.isArray(props.tw)
-          ? props.tw.join(" ")
-          : props.tw
-        : "";
+      return preCompiledClassnames;
     }, [props]);
 
     return React.createElement(component, {
