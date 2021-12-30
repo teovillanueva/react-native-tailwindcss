@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "release": "release-it --npm.skipChecks --ci --token=$TURBOREPO_TOKEN"
+    "release": "release-it --npm.skipChecks --ci"
   },
   "release-it": {
     "git": {
