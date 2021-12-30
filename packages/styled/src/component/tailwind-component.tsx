@@ -1,7 +1,7 @@
 import React from "react";
 import { useMemo } from "react";
 import { TailwindFn } from "twrnc";
-import type { ClassnameValue } from "../types";
+import type { ClassnameValue, TailwindComponent } from "../types";
 import { compileClassNames } from "../utils/classnames";
 
 export const createTailwindComponent = <
@@ -19,22 +19,18 @@ export const createTailwindComponent = <
     ? compileClassNames(strings.raw as Array<string>, tags, {} as P)
     : "";
 
-  const twComponent = React.forwardRef<C, P & { tw?: string }>((props, ref) => {
+  const twComponent = React.forwardRef<
+    C,
+    React.ComponentProps<TailwindComponent<P>>
+  >((props, ref) => {
     const [focused, setFocused] = React.useState(
       (props as { focused?: boolean }).focused || false
     );
 
     const classnames = useMemo(() => {
-      const cn =
-        (includesFunctionTags
-          ? compileClassNames(
-              (props.tw
-                ? [...strings.raw, props.tw]
-                : strings.raw) as Array<string>,
-              tags,
-              props
-            )
-          : preCompiledClassnames) + props.tw;
+      const cn: string = includesFunctionTags
+        ? compileClassNames(strings.raw as string[], tags, props)
+        : preCompiledClassnames;
 
       return cn
         .split(" ")

@@ -17,7 +17,7 @@ export const createTailwindComponent = <
   const includesFunctionTags = tags.some((tag) => typeof tag === "function");
 
   const preCompiledClassnames = !includesFunctionTags
-    ? compileClassNames(strings.raw as Array<string>, tags, {} as P)
+    ? compileClassNames(strings.raw as string[], tags, {} as P)
     : "";
 
   const twComponent = React.forwardRef<
@@ -27,9 +27,7 @@ export const createTailwindComponent = <
     const classnames = useMemo(() => {
       if (includesFunctionTags) {
         return compileClassNames(
-          (props.tw
-            ? [...strings.raw, props.tw]
-            : strings.raw) as Array<string>,
+          (props.tw ? [...strings.raw, props.tw] : strings.raw) as string[],
           tags,
           props
         );

@@ -10,7 +10,7 @@ export type ClassnameValue<P extends {}> =
   | ClassnameFunction<P>;
 
 export type TailwindComponent<P extends {}> = React.ComponentType<
-  P & { tw?: ClassnameValue<P> }
+  P & { tw?: string | string[] }
 >;
 
 export type StyledFunction = <C extends React.ComponentType>(
