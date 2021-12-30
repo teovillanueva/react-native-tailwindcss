@@ -1,6 +1,6 @@
 {
   "name": "@react-native-tailwindcss/postcss",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "React native tailwindcss postcss plugin",
   "main": "index.js",
   "repository": "https://github.com/teovillanueva/react-native-tailwindcss.git",
